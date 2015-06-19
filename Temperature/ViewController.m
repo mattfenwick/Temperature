@@ -7,21 +7,48 @@
 //
 
 #import "ViewController.h"
+#import "ConversionTableViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <ConversionTableViewControllerDelegate>
 
 @end
 
+
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)didTapCelsiusToFahrenheit:(id)sender
+{
+    [self presentConversionViewControllerWithConversionType:ConversionTypeCelsiusToFahrenHeit];
+}
+
+- (IBAction)didTapFahrenheitToCelsius:(id)sender
+{
+    [self presentConversionViewControllerWithConversionType:ConversionTypeCelsiusToFahrenHeit];
+}
+
+- (void)presentConversionViewControllerWithConversionType:(ConversionType)type
+{
+    ConversionTableViewController *controller = [[ConversionTableViewController alloc] initWithConversionType:type];
+    controller.delegate = self;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    navController.modalPresentationStyle = UIModalPresentationFormSheet;
+    navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
+- (void)conversionControllerDidExit:(ConversionTableViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
