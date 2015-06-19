@@ -14,10 +14,6 @@
 		994634EA1B136BFB004F277F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994634E91B136BFB004F277F /* Images.xcassets */; };
 		994634ED1B136BFB004F277F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994634EB1B136BFB004F277F /* LaunchScreen.xib */; };
 		994634F91B136BFB004F277F /* TemperatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 994634F81B136BFB004F277F /* TemperatureTests.m */; };
-		994635051B136E63004F277F /* ConversionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 994635031B136E63004F277F /* ConversionTableViewController.m */; };
-		994635061B136E63004F277F /* ConversionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994635041B136E63004F277F /* ConversionTableViewController.xib */; };
-		9946350A1B1376FA004F277F /* ConversionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 994635081B1376FA004F277F /* ConversionTableViewCell.m */; };
-		9946350B1B1376FA004F277F /* ConversionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994635091B1376FA004F277F /* ConversionTableViewCell.xib */; };
 		99F950671B34D53900BA599B /* TemperatureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F950651B34D53900BA599B /* TemperatureTableViewCell.m */; };
 		99F950681B34D53900BA599B /* TemperatureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F950661B34D53900BA599B /* TemperatureTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -46,12 +42,6 @@
 		994634F21B136BFB004F277F /* TemperatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		994634F71B136BFB004F277F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		994634F81B136BFB004F277F /* TemperatureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemperatureTests.m; sourceTree = "<group>"; };
-		994635021B136E63004F277F /* ConversionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionTableViewController.h; sourceTree = "<group>"; };
-		994635031B136E63004F277F /* ConversionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionTableViewController.m; sourceTree = "<group>"; };
-		994635041B136E63004F277F /* ConversionTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversionTableViewController.xib; sourceTree = "<group>"; };
-		994635071B1376FA004F277F /* ConversionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionTableViewCell.h; sourceTree = "<group>"; };
-		994635081B1376FA004F277F /* ConversionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionTableViewCell.m; sourceTree = "<group>"; };
-		994635091B1376FA004F277F /* ConversionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversionTableViewCell.xib; sourceTree = "<group>"; };
 		99F950641B34D53900BA599B /* TemperatureTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureTableViewCell.h; sourceTree = "<group>"; };
 		99F950651B34D53900BA599B /* TemperatureTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureTableViewCell.m; sourceTree = "<group>"; };
 		99F950661B34D53900BA599B /* TemperatureTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemperatureTableViewCell.xib; sourceTree = "<group>"; };
@@ -104,12 +94,6 @@
 				994634E91B136BFB004F277F /* Images.xcassets */,
 				994634EB1B136BFB004F277F /* LaunchScreen.xib */,
 				994634DC1B136BFB004F277F /* Supporting Files */,
-				994635021B136E63004F277F /* ConversionTableViewController.h */,
-				994635031B136E63004F277F /* ConversionTableViewController.m */,
-				994635041B136E63004F277F /* ConversionTableViewController.xib */,
-				994635071B1376FA004F277F /* ConversionTableViewCell.h */,
-				994635081B1376FA004F277F /* ConversionTableViewCell.m */,
-				994635091B1376FA004F277F /* ConversionTableViewCell.xib */,
 				99F950641B34D53900BA599B /* TemperatureTableViewCell.h */,
 				99F950651B34D53900BA599B /* TemperatureTableViewCell.m */,
 				99F950661B34D53900BA599B /* TemperatureTableViewCell.xib */,
@@ -224,11 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				994634E81B136BFB004F277F /* Main.storyboard in Resources */,
-				994635061B136E63004F277F /* ConversionTableViewController.xib in Resources */,
 				99F950681B34D53900BA599B /* TemperatureTableViewCell.xib in Resources */,
 				994634ED1B136BFB004F277F /* LaunchScreen.xib in Resources */,
 				994634EA1B136BFB004F277F /* Images.xcassets in Resources */,
-				9946350B1B1376FA004F277F /* ConversionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +232,6 @@
 				994634E21B136BFB004F277F /* AppDelegate.m in Sources */,
 				99F950671B34D53900BA599B /* TemperatureTableViewCell.m in Sources */,
 				994634DF1B136BFB004F277F /* main.m in Sources */,
-				9946350A1B1376FA004F277F /* ConversionTableViewCell.m in Sources */,
-				994635051B136E63004F277F /* ConversionTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
