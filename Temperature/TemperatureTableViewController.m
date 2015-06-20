@@ -8,8 +8,10 @@
 
 #import "TemperatureTableViewController.h"
 #import "TemperatureTableViewCell.h"
+#import "ConversionTableViewController.h"
 
-@interface TemperatureTableViewController ()
+
+@interface TemperatureTableViewController () <ConversionTableViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *numbers;
 
@@ -60,6 +62,17 @@
 
 #pragma mark - UITableViewDelegate
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TemperatureTableViewCell *cell = (TemperatureTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    ConversionTableViewController *controller = [[ConversionTableViewController alloc] init];
+    controller.delegate = self;
+    controller.number = [cell.number integerValue];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -68,6 +81,13 @@
 - (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+#pragma mark - ConversionTableViewControllerDelegate
+
+- (void)conversionControllerDidExit:(ConversionTableViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
