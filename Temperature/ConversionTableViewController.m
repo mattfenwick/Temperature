@@ -110,9 +110,9 @@ typedef NS_ENUM(NSInteger, ConversionTableViewControllerConversionType)
         case ConversionTableViewControllerConversionTypeFahrenheitToCelsius:
             return (self.number - 32) / 1.8;
         case ConversionTableViewControllerConversionTypeKilogramsToPounds:
-            return self.number / 2.2;
-        case ConversionTableViewControllerConversionTypePoundsToKilograms:
             return self.number * 2.2;
+        case ConversionTableViewControllerConversionTypePoundsToKilograms:
+            return self.number / 2.2;
         default:
             return 0;
     }
