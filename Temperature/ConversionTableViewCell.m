@@ -33,4 +33,11 @@
     self.titleLabel.text = _titleText;
 }
 
+// see:
+//   http://stackoverflow.com/questions/25770119/ios-8-uitableview-separator-inset-0-not-working
+- (UIEdgeInsets)layoutMargins
+{
+    return UIEdgeInsetsZero;
+}
+
 @end

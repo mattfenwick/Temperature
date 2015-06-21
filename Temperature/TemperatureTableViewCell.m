@@ -33,4 +33,9 @@
     _number = number;
 }
 
+- (UIEdgeInsets)layoutMargins
+{
+    return UIEdgeInsetsZero;
+}
+
 @end
