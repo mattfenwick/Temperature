@@ -9,11 +9,14 @@
 #import "TemperatureTableViewController.h"
 #import "TemperatureTableViewCell.h"
 #import "ConversionTableViewController.h"
+#import "TemperatureNavigationController.h"
 
 
 @interface TemperatureTableViewController () <ConversionTableViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *numbers;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -25,6 +28,9 @@
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"TemperatureTableViewCell" bundle:nil] forCellReuseIdentifier:@"TemperatureTableViewCell"];
     self.numbers = @[@(0), @(5), @(10), @(15), @(20), @(30), @(40), @(50), @(60), @(70), @(80), @(90), @(100), @(125), @(150), @(175), @(200), @(225), @(250), @(275), @(300), @(325), @(350), @(375), @(400), @(425), @(450)];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.titleLabel.text = @"Choose a number";
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,6 +39,16 @@
 }
 
 - (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL)shouldAutorotate
 {
     return YES;
 }
@@ -68,7 +84,7 @@
     ConversionTableViewController *controller = [[ConversionTableViewController alloc] init];
     controller.delegate = self;
     controller.number = [cell.number integerValue];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    TemperatureNavigationController *navController = [[TemperatureNavigationController alloc] initWithRootViewController:controller];
     navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:navController animated:YES completion:nil];
 }

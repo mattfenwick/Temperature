@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TemperatureTableViewController : UITableViewController
+@interface TemperatureTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 
 @end

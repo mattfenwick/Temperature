@@ -49,6 +49,16 @@ typedef NS_ENUM(NSInteger, ConversionTableViewControllerConversionType)
     [self.delegate conversionControllerDidExit:self];
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
